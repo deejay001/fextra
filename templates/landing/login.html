@@ -1,0 +1,69 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block nav %}
+            <ul class="navbar-nav ml-auto pl-2 bg-dark">
+              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{% url 'sign_up' %}" class="nav-link">Sign up</a></li>
+              <li class="nav-item"><a href="{% url 'vend' %}" class="nav-link">Coupon Vendors</a></li>
+              <li class="nav-item"><a href="{% url 'log_in' %}" class="nav-link active">Login</a></li>
+              <li class="nav-item"><a href="{% url 'how' %}" class="nav-link">How FEXTRA Works</a></li>
+              <li class="nav-item"><a href="contactsupport@fextra.com" class="nav-link">Support</a></li>
+            </ul>
+            {% endblock %}
+
+{% block content %}
+
+<!-- start pf sign up -->
+        <div class=" card-2 my-3">
+            <div class="card-body text-center">
+              <!-- start of title -->
+              <div class="card-title text-center text-white text-capitalize">
+                <h2>LOGIN</h2>
+              </div>
+              <br>
+              <form method="post">
+                  {% if messages %}
+                    {% for mes in messages %}
+                        <div class="alert alert-danger">
+                            <strong>{{ mes }}</strong>
+                        </div>
+                    {% endfor %}
+
+                    {% endif %}
+                  {% csrf_token %}
+                    <!-- simple form -->
+                  <div class="form-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      <input type="text" name="username" class="form-control" placeholder="Username" required>
+                    </div>
+                  </div>
+                    <!-- end of simple form -->
+                    <hr>
+                      <!-- simple form -->
+                  <div class="form-group mt-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    </div>
+                  </div>
+                    <!-- end of simple form -->
+                       <!-- start of check box -->
+                       <div class="checkbox text-left pt-2  text-white">
+                        <label>
+                            <input type="checkbox" required>Remember Me
+                        </label>
+                      </div>
+                      <!-- end of check box -->
+                    <hr>
+                 <button type="submit" class=" sign btn btn btn-block  text-uppercase">sign in</button>
+              </form>
+            </div>
+          </div>
+
+      <!-- end of sign up -->
+      <br>
+
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'admine/base.html' %}
+{% load static %}
+{% block head %}
+<title>Fextra | Withdrawals</title>
+{% endblock %}
+{% block content %}
+
+<div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12">
+                        <h1>My Page</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Fextra</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ w_name }} withdrawals</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="header">
+                            <h6>{{ w_name }} withdrawals</h6>
+                        </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom spacing5">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th style="">Type</th>
+                                    <th style="width: 50px;">Amount</th>
+                                    <th style="width: 70px;">AC Number</th>
+                                    <th style="width: 50px;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for with in withdrawals %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>{{ with.name|slice:2 }}</span></div>
+                                            <div class="ml-3">
+                                                <a href="page-invoices-detail.html" title="">{{ with.name }}</a>
+                                                <p class="mb-0">{{ with.ac_name }}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ with.w_type }}</td>
+                                    <td>N{{ with.cash }}</td>
+                                    <td>{{ with.ac_num }}</td>
+                                    {% ifequal with.status 0 %}
+                                    <td><span class="badge badge-warning ml-0 mr-0">Pending</span></td>
+                                    {% else %}
+                                    <td><span class="badge badge-success ml-0 mr-0">Paid</span></td>
+                                    {% endifequal %}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

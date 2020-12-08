@@ -1,0 +1,36 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block nav %}
+            <ul class="navbar-nav ml-auto pl-2 bg-dark">
+              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{% url 'sign_up' %}" class="nav-link">Sign up</a></li>
+              <li class="nav-item"><a href="{% url 'vend' %}" class="nav-link active">Coupon Vendors</a></li>
+              <li class="nav-item"><a href="{% url 'log_in' %}" class="nav-link">Login</a></li>
+              <li class="nav-item"><a href="{% url 'how' %}" class="nav-link">How FEXTRA Works</a></li>
+              <li class="nav-item"><a href="contactsupport@fextra.com" class="nav-link">Support</a></li>
+            </ul>
+            {% endblock %}
+
+
+{% block content %}
+
+  <!-- start of contact us -->
+    <div class="card">
+        <div class="card-body">
+            <h6>Contact MR. Moses</h6>
+            <p class="card-text"><a href="https://wa.me/2348179263952?text=Hello%20I%20Want%20to%20purchase%20a%20Coupon%20Code%20">Click Here</a></p>
+            <br>
+            <br>
+            <h6>Contact MR. Joshua</h6>
+            <p class="card-text"><a href="https://wa.me/2348095690761?text=Hello%20I%20Want%20to%20purchase%20a%20Coupon%20Code%20">Click Here</a></p>
+            <br>
+            <br>
+            <h6>Contact MR. Emmanuel</h6>
+            <p class="card-text"><a href="https://wa.me/2348176448051?text=Hello%20I%20Want%20to%20purchase%20a%20Coupon%20Code%20">Click Here</a></p>
+          </div>
+    </div>
+      <!-- end of contact us -->
+
+
+{% endblock %}

@@ -1,0 +1,119 @@
+body {
+    background: #e8491d;
+    font-family:cursive;
+}
+.container-fluid-1 {
+    text-align:center;
+    width:75%;
+    margin:0px auto;
+}
+.container-fluid-1 li {
+    list-style-type:none;
+}
+/* carousel */
+.carousel-inner img{
+    height:75vh;
+    width:100vh;
+}
+.carousel-caption {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+} 
+.carousel-caption h1 {
+    color:#e8491d;
+}
+/* navbar */
+.navbar {
+    border-top: 2px orangered solid;
+    border-bottom:2px orangered solid;
+    background:black !important;
+}
+.navbar-nav {
+    background:black !important;
+}
+/* btn */
+.btn-outline {
+    background:#e8491d;
+    color:#fff;
+}
+.btn-warning {
+    background:black;
+    color:#fff;
+    border:1px darkslategrey;
+}
+.btn-warning:hover {
+    color:white;
+    background:black;
+    border:1px black solid ;
+
+}
+.btn-danger {
+    background:#e8491d;
+    color:#fff;
+    border:1px #e8491d solid;
+}
+.btn-danger:hover {
+    background:#e8491d;
+    border:1px #e8491d solid ;
+    color:white;
+
+}
+
+/* card */
+.card hr {
+    color:#e8491d;
+}
+.card {
+    background:black;
+    color:#fff;
+}
+.card-2{
+    background: black;
+}
+.card a{
+    color:#e8491d;
+}
+/* Randoms */
+.how, .fex, .issue, .cap, .sex, .all {
+    background:black !important;
+}
+.sign{
+background:#e8491d;
+color: #fff;
+border-radius: 1rem;
+}
+
+/* navbar */
+.navbar-toggler {
+   background:#e8491d; 
+}
+
+/* check-box */
+
+/* footer */
+footer ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.social a{
+   margin: 0 5px;
+}
+/* slide */
+#slides {
+    height:100vh
+}
+/* social media */
+.fa-whatsapp {
+    color:green;
+}
+.fa-facebook {
+    color:#3b5998 ;
+}
+.fa-instagram {
+    color:#517fa4 ;
+}
+.fa-telegram {
+    color:#00aced ;
+}

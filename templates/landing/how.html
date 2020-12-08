@@ -1,0 +1,104 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+
+{% block nav %}
+            <ul class="navbar-nav ml-auto pl-2 bg-dark">
+              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{% url 'sign_up' %}" class="nav-link">Sign up</a></li>
+              <li class="nav-item"><a href="{% url 'vend' %}" class="nav-link">Coupon Vendors</a></li>
+              <li class="nav-item"><a href="{% url 'log_in' %}" class="nav-link">Login</a></li>
+              <li class="nav-item"><a href="{% url 'how' %}" class="nav-link active">How FEXTRA Works</a></li>
+              <li class="nav-item"><a href="contactsupport@fextra.com" class="nav-link">Support</a></li>
+            </ul>
+            {% endblock %}
+
+
+{% block content %}
+
+ <!-- start of how it works -->
+     <div class="card" width="75%">
+         <div class="card-body">
+            <h6 class=" how  text-light text-uppercase mb-0 bg-dark py-3">how <strong class="font-weight-bold">FEXTRA</strong> works</h6>
+            <br>
+            <p class=" fex lead text-white bg-dark text-capitalize"> <strong class="font-weight-bold">FEXTRA AFFILIATE PLATFORM</strong> is an Affiliate platform created for the benefit of everyone to deposit and expect
+            interest in due time. We all know commercial banks don’t give interest on money saved with them,rather it is deducted, which we all complain about so we the FOUNDERs have harnessed the power of the internet and have discovered ways of earning profits for our members,unlike the bank that trades with your money and give us 0 to nothing profit.
+            gentle and steady, we are working earnestly hard to build up integrity and transparency with our members, and be at their best service at all times.</p>
+        </div>
+        <div class="issue card-title text-white bg-dark">
+            <h5 class="text-uppercase font-weight-bold text-center">issues people encounter as novice in the online world.</h5>
+            <ul>
+                <li>Capital to start up a business.</li>
+                <li>People being scammed.</li>
+                <li>Working hard to earn.</li>
+                <li>Referral compulsory programs.</li>
+                <li>Affected by online business that doesn’t last.</li>
+            </ul>
+                <h5 class=" px-3 font-weight-bold text-center"> HOW DO I DEPOSIT AND EARN ON FEXTRA?</h5>
+                    <p class="lead text-caputalize text-white px-3 text-center">All You Do Is purchase a coupon code  then create an account with us and deposit your preferred package(contact coupon vendors for more info) then withdraw when the countdown is over.We generate funds from endorsing companies and adverts. We also partner with top companies which we buy shares from.</p>
+                    <br>
+                    <strong class="font-weight-bold pl-2 display-5">NOTE:NO CASH DEPOSIT ON WEEKEND.</strong>
+                    <br>
+                    <br>
+                    <br>
+                <div class="container-fluid-1">
+                            <h3 class="font-weight-bold text-capitalize my-3 text-center">OUR DEPOSIT PLAN</h3>
+                            <hr>
+                                <h4 class=" f ont-weight-bold text-center">OUR 24HOURS DEPOSIT PLAN</h4>
+                                    <h5 class="text-uppercase text-center">EARN 10% of initial capital after 24hrs</h5>
+                                            <h6 class="p-2">List of Packages Available For Daily Deposit.</h6>
+                                            <ul>
+                                                <li> ₦2,500 (transfer charge  ₦50).</li>
+                                                <li> ₦5,000 (transfer charge  (₦100).</li>
+                                                <li> ₦7,000 (transfer charge  (₦150).</li>
+                                                <li> ₦10,000 (transfer charge (₦200).</li>
+                                                <li> ₦15,000 (transfer charge (₦250).</li>
+                                                <li> ₦20,000 (transfer charge (₦300).</li>
+                                            </ul>
+                                                <h6 class="px-3">No Cash Deposit On Saturdays And Sundays</h6>
+                                                <h6 class="px-3">Payouts takes 24hrs to be processed..</h6>
+                                <br>
+                                <h4 class=" font-weight-bold text-center">OUR 168HOURS/WEEKLY DEPOSIT  PLAN</h4>
+                                    <h5 class="text-uppercase text-center">EARN 25% of initial capital after 168hrs/a week</h5>
+                                        <h6 class="p-2">List Of Packages Available For Weekly Deposit.</h6>
+                                        <ul>
+                                            <li> ₦21,000 (transfer charge  ₦350).</li>
+                                            <li> ₦30,000 (transfer charge  ₦350).</li>
+                                            <li> ₦35,000 (transfer charge  ₦400).</li>
+                                            <li> ₦40,000 (transfer charge  ₦400).</li>
+                                            <li> ₦50,000 (transfer charge  ₦500).</li>
+                                        </ul>
+                                        <h6 class="px-3">No Cash Deposits On Saturdays And Sundays</h6>
+                                        <h6 class="px-3">Payouts takes 24hrs to be processed..</h6>
+                                    <br>
+                                    <h4 class=" font-weight-bold text-center">OUR 720HOURS/MONTHLY DEPOSIT  PLAN</h4>
+                                    <h5 class="text-uppercase text-center">EARN 40% of initial capital after 720hrs/a month</h5>
+                                    <h6 class="p-2">List Of Packages Available For Monthly Deposit.</h6>
+                                        <ul>
+                                            <li> ₦70,000 (transfer charge  ₦1,000).</li>
+                                            <li> ₦100,000 (transfer charge  ₦1,500).</li>
+                                            <li> ₦150,000 (transfer charge  ₦2,000).</li>
+                                            <li> ₦200,000 (transfer charge  ₦2,500).</li>
+                                            <li> ₦250,000 (transfer charge  ₦3,000).</li>
+                                        </ul>
+                                        <h6 class="px-3">No Cash Deposits On Saturdays And Sundays</h6>
+                                        <h6 class="px-3">Payouts takes 24hrs to be processed..</h6>
+
+                </div>
+                                <h4 class="text-center">We plan on expanding our various status of earning as time goes ....</h4>
+                                <div class="container-fluid text-capitalize">
+                                <blockquote> Money is a seed, Don't eat all your seeds... Plant some of those seeds, when they mature, eat from your
+                                    harvest and repeat the process.</blockquote>
+                                    <blockquote>Wealth is not a jackpot, You don't wake up one morning and meet
+                                        wealth rather you deliberately plant it, water it and wait for it to grow, Then remember to always repeat
+                                        the process for it to continue to grow in wealth.</blockquote>
+                                </div>
+                                    <p class="text-center">We created an Affiliate program in which you can earn without much stress</p>
+                            <h4 class="text-center">Join FEXTRA today and win....</h4>
+        </div>
+      </div>
+      <!-- end of how it works -->
+      <br>
+
+
+{% endblock %}

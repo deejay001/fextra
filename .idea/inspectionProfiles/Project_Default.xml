@@ -1,0 +1,124 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="10">
+            <item index="0" class="java.lang.String" itemvalue="controlheight" />
+            <item index="1" class="java.lang.String" itemvalue="controlwidth" />
+            <item index="2" class="java.lang.String" itemvalue="value" />
+            <item index="3" class="java.lang.String" itemvalue="formula_val" />
+            <item index="4" class="java.lang.String" itemvalue="url" />
+            <item index="5" class="java.lang.String" itemvalue="p_id" />
+            <item index="6" class="java.lang.String" itemvalue="token" />
+            <item index="7" class="java.lang.String" itemvalue="post" />
+            <item index="8" class="java.lang.String" itemvalue="type" />
+            <item index="9" class="java.lang.String" itemvalue="width" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="style" />
+            <item index="7" class="java.lang.String" itemvalue="h1" />
+            <item index="8" class="java.lang.String" itemvalue="h2" />
+            <item index="9" class="java.lang.String" itemvalue="h3" />
+            <item index="10" class="java.lang.String" itemvalue="span" />
+            <item index="11" class="java.lang.String" itemvalue="timer" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.8" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="environ" />
+            <item index="1" class="java.lang.String" itemvalue="Pillow" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E722" />
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N806" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="D_tech.d_site.models.Advert.objects" />
+          <option value="D_tech.d_site.models.Article.objects" />
+          <option value="D_tech.d_site.models.Post.objects" />
+          <option value="D_tech.d_site.models.Header.objects" />
+          <option value="blog.models.Post.objects" />
+          <option value="blog.models.Category.object" />
+          <option value="blog.models.Category.objects" />
+          <option value="blog.models.Category.post" />
+          <option value="blog.models.UserPost.objects" />
+          <option value="blog.models.UserPost.comments" />
+          <option value="blog.models.UserProfile.objects" />
+          <option value="blog.models.Quiz.objects" />
+          <option value="personal.models.Post.objects" />
+          <option value="birthday.models.Wish.objects" />
+          <option value="toform.models.Overall.objects" />
+          <option value="toform.models.AgentLoc.objects" />
+          <option value="toform.models.Alajos.objects" />
+          <option value="eav.models.Attribute.objects" />
+          <option value="church.models.News.objects" />
+          <option value="church.models.Event.objects" />
+          <option value="birthday.models.TModel.objects" />
+          <option value="blog.models.Comment.objects" />
+          <option value="shop.models.Product.objects" />
+          <option value="shop.models.Category.objects" />
+          <option value="public.models.Post.objects" />
+          <option value="public.models.Category.objects" />
+          <option value="app1.models.Contact.objects" />
+          <option value="Contact.models.Contacts.objects" />
+          <option value="wine.models.Wine.objects" />
+          <option value="backend.todo.models.Todo.objects" />
+          <option value="todo.models.Todo.objects" />
+          <option value="invest.models.Coupon.objects" />
+          <option value="invest.models.Profile.objects" />
+          <option value="django.db.models.fields.related.OneToOneField.username" />
+          <option value="invest.models.Withdrawal.objects" />
+          <option value="invest.models.Wtype.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

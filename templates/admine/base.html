@@ -1,0 +1,100 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+{% block head %} {% endblock %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Oculux Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="keywords" content="admin template, Oculux admin template, dashboard template, flat admin template, responsive admin template, web app, Light Dark version">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/vendor/animate-css/vivify.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/vendor/c3/c3.min.css' %}"/>
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/site.min.css' %}">
+</head>
+<body class="theme-cyan font-montserrat">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+<div id="wrapper">
+    <nav class="navbar top-navbar">
+        <div class="container-fluid">
+
+            <div class="navbar-left">
+                <div class="navbar-btn">
+                    <a href="{% url 'index' %}"><img src="{% static 'assets/images/icon.svg' %}" alt="Fextra Logo" class="img-fluid logo"></a>
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'c_with' 'Coupon' %}" class="icon-menu" title="">Investment Withdrwals</a></li>
+                    <li><a href="{% url 'c_with' 'Referal' %}" class="icon-menu" title="">Referal Withdrwals</a></li>
+                    <li class="p_social"><a href="page-social.html" class="social icon-menu" title="News"></a></li>
+                    <li class="p_news"><a href="page-news.html" class="news icon-menu" title="News"></a></li>
+                    <li class="p_blog"><a href="page-blog.html" class="blog icon-menu" title="Blog"></a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-right">
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'log_out' %}" class="icon-menu"><i class="icon-power"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="navbar-brand">
+            <a href="index.html"><img src="{% static 'assets/images/icon.svg' %}" alt="Fextra Logo" class="img-fluid logo"><span>Fextra</span></a>
+            <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu icon-close"></i></button>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <div class="user_div">
+                    <i class="user-photo fa fa-user fa-3x"></i>
+                </div>
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>{{ user }}</strong></a>
+                </div>
+            </div>
+            <nav id="left-sidebar-nav" class="sidebar-nav">
+                <ul id="main-menu" class="metismenu">
+                    <li class="header">Main</li>
+                    <li class="active"><a href="{% url 'admine' %}" class="has-arrow"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="{% url 'admin:index' %}"><i class="icon-credit-card"></i><span>Create Coupon</span></a></li>
+                    <li><a href="{% url 'index' %}"><i class="icon-cursor"></i><span>Landing Page</span></a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</div>
+<!-- Javascript -->
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script>
+<script src="{% static 'assets/bundles/vendorscripts.bundle.js' %}"></script>
+<script src="{% static 'assets/bundles/c3.bundle.js' %}"></script>
+<script src="{% static 'assets/bundles/mainscripts.bundle.js' %}"></script>
+<script src="{% static 'assets/js/index.js' %}"></script>
+</body>
+</html>

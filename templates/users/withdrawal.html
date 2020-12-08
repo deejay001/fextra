@@ -1,0 +1,69 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block head %}
+<title>Fextra | Withdraw</title>
+<link rel="stylesheet" href="{% static 'users/style.css' %}">
+{% endblock %}
+{% block content %}
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h1>Withdrawal Form</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Fextra</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">withdraw</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Please fill in the required details</h2>
+                    </div>
+                    <div class="body">
+                        <form id="basic-form" method="post" novalidate>
+                            {% if messages %}
+                                {% for mes in messages %}
+                                    <div class="alert alert-danger">
+                                        <strong>{{ mes }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>Account Name</label>
+                                <input type="text" name="ac_name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Account No</label>
+                                <input type="text" name="ac_num" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Bank</label>
+                                <input type="text" name="bank" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Review</label>
+                                <textarea class="form-control" name="review" rows="5" cols="30" required></textarea>
+                            </div>
+
+                            <br>
+                            <button type="submit" class="btn btn-warning">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'assets/vendor/parsleyjs/js/parsley.min.js' %}"></script>
+
+{% endblock %}
