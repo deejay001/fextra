@@ -131,4 +131,3 @@ dmypy.json
 
 /venv
 __pycache__
-db.sqlite3
