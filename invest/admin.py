@@ -11,7 +11,7 @@ class PlanAdmin(admin.ModelAdmin):
 
 @admin.register(Coupon)
 class CouponAdmin(admin.ModelAdmin):
-    exclude = ('user', 'code', 'output', 'expire_on')
+    exclude = ('code', 'output', 'expire_on')
     list_display = ('user', 'plan', 'stake', 'code', 'status', 'output', 'created_on', 'expire_on')
     list_filter = ('plan', 'status')
     search_fields = ['code']
