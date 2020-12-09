@@ -41,6 +41,11 @@
             <div class="body">
                 <p class="lead">Login to admin account</p>
                 <form class="form-auth-small m-t-20" method="post">
+                    {% if messages %}
+                    {% for mes in messages %}
+                        <div class="alert alert-warning">{{mes}}</div>
+                    {% endfor %}
+                    {% endif %}
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="signin-email" class="control-label sr-only">Email</label>

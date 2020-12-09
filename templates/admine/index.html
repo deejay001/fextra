@@ -60,6 +60,7 @@
                     <div class="header">
                             <h6>Recent withdrawals</h6>
                         </div>
+                    {% if withdrawals %}
                     <div class="table-responsive">
                         <table class="table table-hover table-custom spacing5">
                             <thead>
@@ -96,8 +97,10 @@
                             </tbody>
                         </table>
                     </div>
+                    {% else %}
+                        <h5>There are no withdrawals yet</h5>
+                    {% endif %}
                 </div>
-
             </div>
 
         </div>

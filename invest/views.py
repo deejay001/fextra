@@ -77,10 +77,15 @@ def sign_up(request):
             messages.error(request, "please fill in the required details")
     else:
         form = SignUpForm()
-    return render(request, 'landing/signup.html', {'form': form})
+
+    user_num = User.objects.all().count()
+    return render(request, 'landing/signup.html', {'form': form,
+                                                   'user_num': user_num,
+                                                   })
 
 
 def get_coupon(request, code, loc):
+
     try:
         coupon = get_object_or_404(Coupon, code=code)
 
@@ -240,8 +245,14 @@ def admine_login(request):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            login(request, user)
-            return redirect('admine')
+
+            if user.is_staff:
+                login(request, user)
+                return redirect('admine')
+
+            else:
+                messages.error(request, "Only admins are allowed to login here")
+                return redirect('a_login')
 
         else:
             messages.error(request, 'Invalid login credentials')
@@ -266,7 +277,7 @@ def admine_page(request):
                                                      'num_login': num_login,
                                                      'withdrawals': withdrawals})
     else:
-        return redirect('log_in')
+        return redirect('a_login')
 
 
 def check_with(request, w_name):
