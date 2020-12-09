@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Coupon, Plan, Profile, Withdrawal, Wtype
 
+
 # Register your models here.
 
 
@@ -11,7 +12,7 @@ class PlanAdmin(admin.ModelAdmin):
 
 @admin.register(Coupon)
 class CouponAdmin(admin.ModelAdmin):
-    exclude = ('code', 'output')
+    exclude = ('user', 'code', 'output', 'expire_on')
     list_display = ('user', 'plan', 'stake', 'code', 'status', 'output', 'created_on', 'expire_on')
     list_filter = ('plan', 'status')
     search_fields = ['code']
@@ -30,6 +31,6 @@ class WtypeAdmin(admin.ModelAdmin):
 
 @admin.register(Withdrawal)
 class WithdrawAdmin(admin.ModelAdmin):
-    list_display = ('name','w_type', 'cash', 'ac_name', 'ac_num', 'bank', 'status', 'created_on')
+    list_display = ('name', 'w_type', 'cash', 'ac_name', 'ac_num', 'bank', 'status', 'created_on')
     list_filter = ('bank', 'status', 'created_on')
     search_fields = ['name', 'ac_num', 'ac_name']
