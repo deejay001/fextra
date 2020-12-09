@@ -1,6 +1,9 @@
 import environ
 from fextra.settings.settings import *
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 env = environ.Env()
 
 # False if not in os.environ

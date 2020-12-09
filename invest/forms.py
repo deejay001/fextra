@@ -11,7 +11,7 @@ class SignUpForm(UserCreationForm):
     email = forms.EmailField(max_length=254)
     phone = forms.CharField(max_length=11)
     coupon = forms.CharField(max_length=8)
-    referal = forms.CharField(max_length=8)
+    referal = forms.CharField(max_length=8, required=False)
 
     class Meta:
         model = User
