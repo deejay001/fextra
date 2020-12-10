@@ -263,7 +263,7 @@ def admine_login(request):
 
 def admine_page(request):
     user = request.user
-    if user.is_authenticated:
+    if user.is_authenticated and user.is_staff:
         withdrawals = Withdrawal.objects.order_by('-created_on')[:5]
         user_count = User.objects.all().count()
 
@@ -287,6 +287,11 @@ def check_with(request, w_name):
     return render(request, 'admine/withdrawals.html', {'user': request.user,
                                                        'withdrawals': withdrawals,
                                                        'w_name': w_name})
+
+
+def admin_users(request):
+    users = User.objects.filter(is_superuser=False)
+    return render(request, 'admine/users.html', {'users': users})
 
 
 def log_out(request):

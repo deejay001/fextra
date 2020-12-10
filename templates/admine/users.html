@@ -1,0 +1,68 @@
+{% extends 'admine/base.html' %}
+{% load static %}
+{% block head %}
+<title>Fextra | Withdrawals</title>
+{% endblock %}
+{% block content %}
+
+<div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12">
+                        <h1>My Page</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Fextra</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Members</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="header">
+                            <h6>Member details</h6>
+                        </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom spacing5">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th style="">Email</th>
+                                    <th style="width: 50px;">First name</th>
+                                    <th style="width: 70px;">Last name</th>
+                                    <th style="width: 50px;">Referal Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for user in users %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>{{ user.username|slice:2 }}</span></div>
+                                            <div class="ml-3">
+                                                <a href="#" title="">{{ user.username }}</a>
+                                                <p class="mb-0">{{ with.ac_name }}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.first_name }}</td>
+                                    <td>{{ user.last_name }}</td>
+                                    <td>{{ user.profile.ref_code }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

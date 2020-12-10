@@ -25,6 +25,7 @@ urlpatterns += [
 urlpatterns += [
     path('admin_login', views.admine_login, name='a_login'),
     path('admin_dashboard', views.admine_page, name='admine'),
+    path('members', views.admin_users, name='a_users'),
     path('withdrawals/<w_name>', views.check_with, name='c_with'),
 ]
 
