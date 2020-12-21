@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block nav %}
-            <ul class="navbar-nav ml-auto pl-2 bg-dark">
-              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
-              <li class="nav-item"><a href="{% url 'sign_up' %}" class="nav-link">Sign up</a></li>
-              <li class="nav-item"><a href="{% url 'vend' %}" class="nav-link">Coupon Vendors</a></li>
-              <li class="nav-item"><a href="{% url 'log_in' %}" class="nav-link">Login</a></li>
-              <li class="nav-item"><a href="{% url 'how' %}" class="nav-link">How FEXTRA Works</a></li>
-              <li class="nav-item"><a href="contactsupport@fextra.com" class="nav-link">Support</a></li>
-            </ul>
-            {% endblock %}
+    <ul class="navbar-nav ml-auto pl-2 bg-dark">
+      <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="{% url 'sign_up' %}" class="nav-link">Sign up</a></li>
+      <li class="nav-item"><a href="{% url 'vend' %}" class="nav-link">Coupon Vendors</a></li>
+      <li class="nav-item"><a href="{% url 'log_in' %}" class="nav-link">Login</a></li>
+      <li class="nav-item"><a href="{% url 'how' %}" class="nav-link">How FEXTRA Works</a></li>
+      <li class="nav-item"><a href="contactsupport@fextra.com" class="nav-link">Support</a></li>
+    </ul>
+{% endblock %}
 
 {% block content %}
 
@@ -23,25 +23,20 @@
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'landing/images/background.png' %}" alt="">
+                <img src="{% static 'landing/images/First.png' %}" alt="">
                 <div class="carousel-caption">
-                    <h1 class="display-4 font-weight-bold">FEXTRA</h1>
-                    <h3>The No.1 Growing Investment Platform in Nigeria.</h3>
-                    <div class="pt-4 d-flex justify-content-between">
-                      <a href="{% url 'sign_up' %}" class="btn btn-danger btn-lg">SIGN UP</a>
-                      <a href="{% url 'log_in' %}" class="btn btn-warning btn-lg">LOGIN</a>
+                    <div class="mt-4 d-flex justify-content-between">
+                      <a href="sign up.html" class="btn btn btn-md">SIGN UP</a>
+                      <a href="login.html" class="btn btn btn-md">LOGIN</a>
                     </div>
 
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'landing/images/human.png' %}" alt="">
-                <div class="carousel-caption text-center">
-                    <h3 class="text-uppercase">Always Wear A face Mask</h3>
-                </div>
+                <img src="{% static 'landing/images/work.png' %}" alt="">
             </div>
             <div class="carousel-item">
-                <img src="{% static 'landing/images/background2.png' %}" alt="">
+              <img src="{% static 'landing/images/msk.png' %}" alt="">
             </div>
         </div>
       </div>
