@@ -78,7 +78,15 @@ class Coupon(models.Model):
 
     def put_return(self):
         stake = self.get_stake()
-        out = (0.1 * stake) + stake
+        plan = self.plan.title
+
+        if plan == "Daily":
+            out = (0.1 * stake) + stake
+        elif plan == "Weekly":
+            out = (0.25 * stake) + stake
+        else:
+            out = (0.4 * stake) + stake
+
         self.output = Decimal(out)
 
     def save(self, *args, **kwargs):
